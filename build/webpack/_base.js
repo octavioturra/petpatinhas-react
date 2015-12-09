@@ -54,8 +54,8 @@ const webpackConfig = {
         exclude : /node_modules/,
         loader  : 'babel',
         query   : {
-          stage    : 0,
-          optional : ['runtime'],
+          cacheDirectory: true,
+          presets: ['es2015', 'stage-0', 'react']
           env      : {
             development : {
               plugins : ['react-transform'],
